@@ -1,0 +1,3584 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.IndividualControlFormatting.true...IndividualControlFormatting />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style>
+    <style-rule element='axis'>
+      <format attr='stroke-color' value='#463020' />
+      <format attr='tick-color' value='#463020' />
+    </style-rule>
+    <style-rule element='worksheet'>
+      <format attr='font-size' value='8' />
+      <format attr='font-weight' value='bold' />
+      <format attr='color' value='#463020' />
+    </style-rule>
+    <style-rule element='gridline'>
+      <format attr='line-visibility' value='off' />
+    </style-rule>
+    <style-rule element='zeroline'>
+      <format attr='line-visibility' value='off' />
+    </style-rule>
+    <style-rule element='title'>
+      <format attr='font-size' value='12' />
+      <format attr='font-weight' value='bold' />
+      <format attr='color' value='#463020' />
+    </style-rule>
+    <style-rule element='tooltip'>
+      <format attr='font-weight' value='normal' />
+    </style-rule>
+  </style>
+  <datasources>
+    <datasource caption='books.csv+ (Multiple Connections)' inline='true' name='federated.1yal62x1we2nx41fzmy2g02xzh7v' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='books' name='textscan.0k5944w17w99t31eno2bk012fahh'>
+            <connection class='textscan' directory='C:/Users/admin/Downloads/archive (1)' filename='books.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='Radial Bar chart values' name='textscan.1n7fk8918zs7jn14kzhfl04005ew'>
+            <connection class='textscan' directory='C:/Users/admin/Downloads' filename='Radial Bar chart values.txt' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='1' />
+              <expression op='1' />
+            </expression>
+          </clause>
+          <relation connection='textscan.0k5944w17w99t31eno2bk012fahh' name='books.csv' table='[books#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+              <column datatype='integer' name='bookID' ordinal='0' />
+              <column datatype='string' name='title' ordinal='1' />
+              <column datatype='string' name='authors' ordinal='2' />
+              <column datatype='real' name='average_rating' ordinal='3' />
+              <column datatype='string' name='isbn' ordinal='4' />
+              <column datatype='integer' name='isbn13' ordinal='5' />
+              <column datatype='string' name='language_code' ordinal='6' />
+              <column datatype='integer' name='num_pages' ordinal='7' />
+              <column datatype='integer' name='ratings_count' ordinal='8' />
+              <column datatype='integer' name='text_reviews_count' ordinal='9' />
+              <column datatype='date' name='publication_date' ordinal='10' />
+              <column datatype='string' name='publisher' ordinal='11' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1n7fk8918zs7jn14kzhfl04005ew' name='Radial Bar chart values.txt' table='[Radial Bar chart values#txt]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_IN'>
+              <column datatype='integer' name='Value' ordinal='0' />
+            </columns>
+          </relation>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[books.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='quote-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Radial Bar chart values.txt]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bookID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[bookID]</local-name>
+            <parent-name>[books.csv]</parent-name>
+            <remote-alias>bookID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[books.csv_95E2EE71D97F492B893C00996E6B11FC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>title</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[title]</local-name>
+            <parent-name>[books.csv]</parent-name>
+            <remote-alias>title</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[books.csv_95E2EE71D97F492B893C00996E6B11FC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>authors</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[authors]</local-name>
+            <parent-name>[books.csv]</parent-name>
+            <remote-alias>authors</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[books.csv_95E2EE71D97F492B893C00996E6B11FC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>average_rating</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[average_rating]</local-name>
+            <parent-name>[books.csv]</parent-name>
+            <remote-alias>average_rating</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[books.csv_95E2EE71D97F492B893C00996E6B11FC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>isbn</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[isbn]</local-name>
+            <parent-name>[books.csv]</parent-name>
+            <remote-alias>isbn</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[books.csv_95E2EE71D97F492B893C00996E6B11FC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>isbn13</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[isbn13]</local-name>
+            <parent-name>[books.csv]</parent-name>
+            <remote-alias>isbn13</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[books.csv_95E2EE71D97F492B893C00996E6B11FC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>language_code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[language_code]</local-name>
+            <parent-name>[books.csv]</parent-name>
+            <remote-alias>language_code</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[books.csv_95E2EE71D97F492B893C00996E6B11FC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_pages</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[num_pages]</local-name>
+            <parent-name>[books.csv]</parent-name>
+            <remote-alias>num_pages</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[books.csv_95E2EE71D97F492B893C00996E6B11FC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ratings_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ratings_count]</local-name>
+            <parent-name>[books.csv]</parent-name>
+            <remote-alias>ratings_count</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[books.csv_95E2EE71D97F492B893C00996E6B11FC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>text_reviews_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[text_reviews_count]</local-name>
+            <parent-name>[books.csv]</parent-name>
+            <remote-alias>text_reviews_count</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[books.csv_95E2EE71D97F492B893C00996E6B11FC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>publication_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[publication_date]</local-name>
+            <parent-name>[books.csv]</parent-name>
+            <remote-alias>publication_date</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[books.csv_95E2EE71D97F492B893C00996E6B11FC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>publisher</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[publisher]</local-name>
+            <parent-name>[books.csv]</parent-name>
+            <remote-alias>publisher</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[books.csv_95E2EE71D97F492B893C00996E6B11FC]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Value</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Value]</local-name>
+            <parent-name>[Radial Bar chart values.txt]</parent-name>
+            <remote-alias>Value</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[books.csv_95E2EE71D97F492B893C00996E6B11FC]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='My Rating Count' datatype='real' name='[Calculation_197595486241009666]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[ratings_count]/2' />
+      </column>
+      <column caption='My_Index' datatype='integer' name='[Calculation_197595486247227395]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='INDEX()-1'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='My_Total' datatype='integer' name='[Calculation_197595486247493636]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='WINDOW_MAX(COUNTD([bookID]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='My_Rank' datatype='integer' name='[Calculation_197595486247841797]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='RANK_UNIQUE([Calculation_197595486247493636],&apos;asc&apos;)'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Percantage' datatype='real' name='[Calculation_197595486248411143]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Calculation_197595486247493636]/[My_Total (copy)_197595486248157190]'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='X' datatype='real' name='[Calculation_197595486248775688]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COS(RADIANS([Calculation_197595486247227395]*[Calculation_197595486248411143]))*[Calculation_197595486247841797]'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Y' datatype='real' name='[Calculation_197595486249459721]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SIN(RADIANS([Calculation_197595486247227395]*[Calculation_197595486248411143]))*[Calculation_197595486247841797]'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='My_Average_Rating' datatype='real' name='[Calculation_197595486265868306]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[average_rating]/2' />
+      </column>
+      <column caption='Numbers' datatype='real' name='[Calculation_197595486266167315]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[num_pages]/2' />
+      </column>
+      <column caption='Text Reviews' datatype='real' name='[Calculation_197595486266322964]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[text_reviews_count]/2' />
+      </column>
+      <column caption='My_Total_Max' datatype='integer' name='[My_Total (copy)_197595486248157190]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='WINDOW_MAX(COUNTD([bookID]))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column aggregation='None' caption='Path' datatype='integer' name='[Value (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='0' formula='[Value]' peg='0' size='1' />
+      </column>
+      <column datatype='integer' name='[Value]' role='measure' type='quantitative' />
+      <column caption='books.csv' datatype='table' name='[__tableau_internal_object_id__].[books.csv_95E2EE71D97F492B893C00996E6B11FC]' role='measure' type='quantitative' />
+      <column caption='Authors' datatype='string' name='[authors]' role='dimension' type='nominal' />
+      <column caption='Average Rating' datatype='real' name='[average_rating]' role='measure' type='quantitative' />
+      <column caption='Book ID' datatype='integer' name='[bookID]' role='dimension' type='ordinal' />
+      <column caption='Isbn13' datatype='integer' name='[isbn13]' role='measure' type='quantitative' />
+      <column caption='Isbn' datatype='string' name='[isbn]' role='dimension' type='nominal' />
+      <column caption='Language Code' datatype='string' name='[language_code]' role='dimension' type='nominal' />
+      <column caption='Num Pages' datatype='integer' name='[num_pages]' role='measure' type='quantitative' />
+      <column caption='Publication Date' datatype='date' name='[publication_date]' role='dimension' type='ordinal' />
+      <column caption='Publisher' datatype='string' name='[publisher]' role='dimension' type='nominal' />
+      <column caption='Ratings Count' datatype='integer' name='[ratings_count]' role='measure' type='quantitative' />
+      <column caption='Text Reviews Count' datatype='integer' name='[text_reviews_count]' role='measure' type='quantitative' />
+      <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+      <column-instance column='[language_code]' derivation='None' name='[none:language_code:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/admin/AppData/Local/Temp/TableauTemp/#TableauTemp_128l8pm0761h3a1fhwv6w00b1nuq.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='03/02/2025 04:42:09 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>bookID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[bookID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>bookID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>books.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9517</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[books.csv_95E2EE71D97F492B893C00996E6B11FC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>title</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[title]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>title</remote-alias>
+              <ordinal>1</ordinal>
+              <family>books.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8061</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[books.csv_95E2EE71D97F492B893C00996E6B11FC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>authors</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[authors]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>authors</remote-alias>
+              <ordinal>2</ordinal>
+              <family>books.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4573</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[books.csv_95E2EE71D97F492B893C00996E6B11FC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>average_rating</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[average_rating]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>average_rating</remote-alias>
+              <ordinal>3</ordinal>
+              <family>books.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>232</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[books.csv_95E2EE71D97F492B893C00996E6B11FC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>isbn</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[isbn]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>isbn</remote-alias>
+              <ordinal>4</ordinal>
+              <family>books.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>9517</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[books.csv_95E2EE71D97F492B893C00996E6B11FC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>isbn13</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[isbn13]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>isbn13</remote-alias>
+              <ordinal>5</ordinal>
+              <family>books.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9517</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[books.csv_95E2EE71D97F492B893C00996E6B11FC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>language_code</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[language_code]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>language_code</remote-alias>
+              <ordinal>6</ordinal>
+              <family>books.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>21</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[books.csv_95E2EE71D97F492B893C00996E6B11FC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>num_pages</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[num_pages]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>num_pages</remote-alias>
+              <ordinal>7</ordinal>
+              <family>books.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1207</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[books.csv_95E2EE71D97F492B893C00996E6B11FC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ratings_count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ratings_count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ratings_count</remote-alias>
+              <ordinal>8</ordinal>
+              <family>books.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3732</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[books.csv_95E2EE71D97F492B893C00996E6B11FC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>text_reviews_count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[text_reviews_count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>text_reviews_count</remote-alias>
+              <ordinal>9</ordinal>
+              <family>books.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1444</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[books.csv_95E2EE71D97F492B893C00996E6B11FC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>publication_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[publication_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>publication_date</remote-alias>
+              <ordinal>10</ordinal>
+              <family>books.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>3043</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[books.csv_95E2EE71D97F492B893C00996E6B11FC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>publisher</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[publisher]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>publisher</remote-alias>
+              <ordinal>11</ordinal>
+              <family>books.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1870</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <object-id>[books.csv_95E2EE71D97F492B893C00996E6B11FC]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Value</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Value]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Value</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Radial Bar chart values.txt</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[books.csv_95E2EE71D97F492B893C00996E6B11FC]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:language_code:nk]' type='palette'>
+            <map to='#463020'>
+              <bucket>&quot;en-GB&quot;</bucket>
+            </map>
+            <map to='#463020'>
+              <bucket>&quot;en-US&quot;</bucket>
+            </map>
+            <map to='#463020'>
+              <bucket>&quot;eng&quot;</bucket>
+            </map>
+            <map to='#463020'>
+              <bucket>&quot;fre&quot;</bucket>
+            </map>
+            <map to='#463020'>
+              <bucket>&quot;ger&quot;</bucket>
+            </map>
+            <map to='#463020'>
+              <bucket>&quot;grc&quot;</bucket>
+            </map>
+            <map to='#463020'>
+              <bucket>&quot;jpn&quot;</bucket>
+            </map>
+            <map to='#463020'>
+              <bucket>&quot;mul&quot;</bucket>
+            </map>
+            <map to='#463020'>
+              <bucket>&quot;spa&quot;</bucket>
+            </map>
+            <map to='#463020'>
+              <bucket>&quot;zho&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;tur&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;9780674842113&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;ale&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;rus&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;wel&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;ara&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;lat&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;9780851742717&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;nl&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;ita&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;en-CA&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;srp&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;gla&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;glg&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;msa&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;enm&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;swe&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;9781563841552&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;nor&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;9781593600112&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;por&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='bookID' />
+        <field-sort-custom-order field='title' />
+        <field-sort-custom-order field='authors' />
+        <field-sort-custom-order field='average_rating' />
+        <field-sort-custom-order field='Calculation_197595486265868306' />
+        <field-sort-custom-order field='isbn' />
+        <field-sort-custom-order field='isbn13' />
+        <field-sort-custom-order field='language_code' />
+        <field-sort-custom-order field='num_pages' />
+        <field-sort-custom-order field='Calculation_197595486266167315' />
+        <field-sort-custom-order field='ratings_count' />
+        <field-sort-custom-order field='Calculation_197595486241009666' />
+        <field-sort-custom-order field='text_reviews_count' />
+        <field-sort-custom-order field='Calculation_197595486266322964' />
+        <field-sort-custom-order field='publication_date' />
+        <field-sort-custom-order field='publisher' />
+        <field-sort-custom-order field='Value' />
+        <field-sort-custom-order field='Geometry (generated)' />
+        <field-sort-custom-order field='Latitude (generated)' />
+        <field-sort-custom-order field='Longitude (generated)' />
+        <field-sort-custom-order field=':Measure Names' />
+        <field-sort-custom-order field='Multiple Values' />
+      </field-sort-info>
+      <object-graph>
+        <objects>
+          <object caption='books.csv' id='books.csv_95E2EE71D97F492B893C00996E6B11FC'>
+            <properties context=''>
+              <relation join='inner' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='1' />
+                    <expression op='1' />
+                  </expression>
+                </clause>
+                <relation connection='textscan.0k5944w17w99t31eno2bk012fahh' name='books.csv' table='[books#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                    <column datatype='integer' name='bookID' ordinal='0' />
+                    <column datatype='string' name='title' ordinal='1' />
+                    <column datatype='string' name='authors' ordinal='2' />
+                    <column datatype='real' name='average_rating' ordinal='3' />
+                    <column datatype='string' name='isbn' ordinal='4' />
+                    <column datatype='integer' name='isbn13' ordinal='5' />
+                    <column datatype='string' name='language_code' ordinal='6' />
+                    <column datatype='integer' name='num_pages' ordinal='7' />
+                    <column datatype='integer' name='ratings_count' ordinal='8' />
+                    <column datatype='integer' name='text_reviews_count' ordinal='9' />
+                    <column datatype='date' name='publication_date' ordinal='10' />
+                    <column datatype='string' name='publisher' ordinal='11' />
+                  </columns>
+                </relation>
+                <relation connection='textscan.1n7fk8918zs7jn14kzhfl04005ew' name='Radial Bar chart values.txt' table='[Radial Bar chart values#txt]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_IN'>
+                    <column datatype='integer' name='Value' ordinal='0' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name=' Ratings Count'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='books.csv+ (Multiple Connections)' name='federated.1yal62x1we2nx41fzmy2g02xzh7v' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1yal62x1we2nx41fzmy2g02xzh7v'>
+            <column caption='My Rating Count' datatype='real' name='[Calculation_197595486241009666]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[ratings_count]/2' />
+            </column>
+            <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+            <column caption='Ratings Count' datatype='integer' name='[ratings_count]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_197595486241009666]' derivation='Sum' name='[sum:Calculation_197595486241009666:qk]' pivot='key' type='quantitative' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:title:nk]' member='&quot;1 000 Places to See Before You Die&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='border-color' value='#463020' />
+            <format attr='border-width' value='1' />
+            <format attr='border-style' value='solid' />
+            <format attr='text-align' value='auto' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f4f2e9' />
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-color' scope='rows' value='#463020' />
+            <format attr='stroke-color' scope='cols' value='#463020' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='border-width' value='1' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[sum:Calculation_197595486241009666:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>Rating Count&#10;&lt;</run>
+                <run>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[sum:Calculation_197595486241009666:qk]</run>
+                <run>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#463020' />
+                <format attr='mark-transparency' value='255' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='1267' />
+                <format attr='maxwidth' value='1267' />
+                <format attr='minheight' value='132860' />
+                <format attr='maxheight' value='132860' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <show-full-range>
+          <column>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[Value (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{F9D8C272-54E9-4D0E-8883-A583CE81609C}' />
+    </worksheet>
+    <worksheet name='Authors'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='books.csv+ (Multiple Connections)' name='federated.1yal62x1we2nx41fzmy2g02xzh7v' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1yal62x1we2nx41fzmy2g02xzh7v'>
+            <column caption='Authors' datatype='string' name='[authors]' role='dimension' type='nominal' />
+            <column-instance column='[authors]' derivation='None' name='[none:authors:nk]' pivot='key' type='nominal' />
+            <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:title:nk]' member='&quot;1 000 Places to See Before You Die&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='border-color' value='#463020' />
+            <format attr='border-width' value='1' />
+            <format attr='border-style' value='solid' />
+            <format attr='text-align' value='auto' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:authors:nk]' value='224' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f4f2e9' />
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-color' scope='rows' value='#463020' />
+            <format attr='stroke-color' scope='cols' value='#463020' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='border-width' value='1' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <_.fcp.IndividualControlFormatting.true...style-rule element='quick-filter'>
+            <_.fcp.IndividualControlFormatting.true...format attr='border-width' field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' value='0' />
+            <_.fcp.IndividualControlFormatting.true...format attr='border-style' field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' value='none' />
+          </_.fcp.IndividualControlFormatting.true...style-rule>
+          <_.fcp.IndividualControlFormatting.true...style-rule element='quick-filter-title'>
+            <_.fcp.IndividualControlFormatting.true...format attr='text-align' field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' value='center' />
+          </_.fcp.IndividualControlFormatting.true...style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:authors:nk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>Authors:&#10;  &lt;</run>
+                <run>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:authors:nk]</run>
+                <run>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#463020' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='1267' />
+                <format attr='maxwidth' value='1267' />
+                <format attr='minheight' value='132860' />
+                <format attr='maxheight' value='132860' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <show-full-range>
+          <column>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[Value (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{ECB9C294-1B98-487E-8777-4D5B3856BABC}' />
+    </worksheet>
+    <worksheet name='Authors by Total Books'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='books.csv+ (Multiple Connections)' name='federated.1yal62x1we2nx41fzmy2g02xzh7v' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1yal62x1we2nx41fzmy2g02xzh7v'>
+            <column caption='Authors' datatype='string' name='[authors]' role='dimension' type='nominal' />
+            <column caption='Book ID' datatype='integer' name='[bookID]' role='dimension' type='ordinal' />
+            <column-instance column='[bookID]' derivation='CountD' name='[ctd:bookID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[authors]' derivation='None' name='[none:authors:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:authors:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[ctd:bookID:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[ctd:bookID:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='border-color' value='#463020' />
+            <format attr='border-width' value='1' />
+            <format attr='border-style' value='solid' />
+            <format attr='text-align' value='auto' />
+            <format attr='cell-w' value='102' />
+            <format attr='cell-h' value='34' />
+            <format attr='cell' value='34' />
+            <format attr='cell-q' value='170' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:authors:nk]' value='224' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f4f2e9' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-color' scope='rows' value='#463020' />
+            <format attr='stroke-color' scope='cols' value='#463020' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='border-width' value='1' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[ctd:bookID:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#463020' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='1220' />
+                <format attr='maxwidth' value='1220' />
+                <format attr='minheight' value='132860' />
+                <format attr='maxheight' value='132860' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:authors:nk]</rows>
+        <cols>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[ctd:bookID:qk]</cols>
+      </table>
+      <simple-id uuid='{BA4E8236-485A-4896-A1E4-83A469A99085}' />
+    </worksheet>
+    <worksheet name='Average Rating'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='books.csv+ (Multiple Connections)' name='federated.1yal62x1we2nx41fzmy2g02xzh7v' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1yal62x1we2nx41fzmy2g02xzh7v'>
+            <column caption='Average Rating' datatype='real' name='[average_rating]' role='measure' type='quantitative' />
+            <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+            <column-instance column='[average_rating]' derivation='Sum' name='[sum:average_rating:qk]' pivot='key' type='quantitative' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:title:nk]' member='&quot;1 000 Places to See Before You Die&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='border-color' value='#463020' />
+            <format attr='border-width' value='1' />
+            <format attr='border-style' value='solid' />
+            <format attr='text-align' value='auto' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f4f2e9' />
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-color' scope='rows' value='#463020' />
+            <format attr='stroke-color' scope='cols' value='#463020' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='border-width' value='1' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[sum:average_rating:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>Average Rating:&#10;&lt;</run>
+                <run>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[sum:average_rating:qk]</run>
+                <run>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#463020' />
+                <format attr='mark-transparency' value='255' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='1267' />
+                <format attr='maxwidth' value='1267' />
+                <format attr='minheight' value='132860' />
+                <format attr='maxheight' value='132860' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <show-full-range>
+          <column>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[Value (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{275B3211-0912-4C1D-8C39-821D0EB1C9E7}' />
+    </worksheet>
+    <worksheet name='Books by Publication Date'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='books.csv+ (Multiple Connections)' name='federated.1yal62x1we2nx41fzmy2g02xzh7v' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1yal62x1we2nx41fzmy2g02xzh7v'>
+            <column caption='Book ID' datatype='integer' name='[bookID]' role='dimension' type='ordinal' />
+            <column-instance column='[bookID]' derivation='CountD' name='[ctd:bookID:qk]' pivot='key' type='quantitative' />
+            <column caption='Publication Date' datatype='date' name='[publication_date]' role='dimension' type='ordinal' />
+            <column-instance column='[publication_date]' derivation='Year' name='[yr:publication_date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[yr:publication_date:qk]' field-type='quantitative' max='2004' min='2003' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[ctd:bookID:qk]' field-type='quantitative' max='0' min='-2' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='border-color' value='#463020' />
+            <format attr='border-width' value='1' />
+            <format attr='border-style' value='solid' />
+            <format attr='text-align' value='auto' />
+            <format attr='cell-w' value='66' />
+            <format attr='cell-h' value='22' />
+            <format attr='cell' value='22' />
+            <format attr='cell-q' value='110' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f4f2e9' />
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-color' scope='rows' value='#463020' />
+            <format attr='stroke-color' scope='cols' value='#463020' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='border-width' value='1' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#463020' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-transparency' value='255' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='1220' />
+                <format attr='maxwidth' value='1220' />
+                <format attr='minheight' value='132860' />
+                <format attr='maxheight' value='132860' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[ctd:bookID:qk]</rows>
+        <cols>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[yr:publication_date:qk]</cols>
+      </table>
+      <simple-id uuid='{34C70FD1-A349-4677-8831-812107AFF0DB}' />
+    </worksheet>
+    <worksheet name='Languages Code'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='books.csv+ (Multiple Connections)' name='federated.1yal62x1we2nx41fzmy2g02xzh7v' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1yal62x1we2nx41fzmy2g02xzh7v'>
+            <column caption='Language Code' datatype='string' name='[language_code]' role='dimension' type='nominal' />
+            <column-instance column='[language_code]' derivation='None' name='[none:language_code:nk]' pivot='key' type='nominal' />
+            <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:title:nk]' member='&quot;1 000 Places to See Before You Die&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='border-color' value='#463020' />
+            <format attr='border-width' value='1' />
+            <format attr='border-style' value='solid' />
+            <format attr='text-align' value='auto' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f4f2e9' />
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-color' scope='rows' value='#463020' />
+            <format attr='stroke-color' scope='cols' value='#463020' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='border-width' value='1' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:language_code:nk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>Language Code:&#10;&lt;</run>
+                <run>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:language_code:nk]</run>
+                <run>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#463020' />
+                <format attr='mark-transparency' value='255' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='1267' />
+                <format attr='maxwidth' value='1267' />
+                <format attr='minheight' value='132860' />
+                <format attr='maxheight' value='132860' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <show-full-range>
+          <column>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[Value (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{4141B10B-FC8A-41C1-A04C-E21CCF8E070C}' />
+    </worksheet>
+    <worksheet name='Numbers of Pages'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='books.csv+ (Multiple Connections)' name='federated.1yal62x1we2nx41fzmy2g02xzh7v' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1yal62x1we2nx41fzmy2g02xzh7v'>
+            <column caption='Numbers' datatype='real' name='[Calculation_197595486266167315]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[num_pages]/2' />
+            </column>
+            <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+            <column caption='Num Pages' datatype='integer' name='[num_pages]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_197595486266167315]' derivation='Sum' name='[sum:Calculation_197595486266167315:qk]' pivot='key' type='quantitative' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:title:nk]' member='&quot;1 000 Places to See Before You Die&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='border-color' value='#463020' />
+            <format attr='border-width' value='1' />
+            <format attr='border-style' value='solid' />
+            <format attr='text-align' value='auto' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f4f2e9' />
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-color' scope='rows' value='#463020' />
+            <format attr='stroke-color' scope='cols' value='#463020' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='border-width' value='1' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[sum:Calculation_197595486266167315:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>Numbers of Pages:&#10;&lt;</run>
+                <run>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[sum:Calculation_197595486266167315:qk]</run>
+                <run>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#463020' />
+                <format attr='mark-transparency' value='255' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='1267' />
+                <format attr='maxwidth' value='1267' />
+                <format attr='minheight' value='132860' />
+                <format attr='maxheight' value='132860' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <show-full-range>
+          <column>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[Value (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{E71844F3-6EF9-4515-B8D2-D488AABC9276}' />
+    </worksheet>
+    <worksheet name='Publication Date'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='books.csv+ (Multiple Connections)' name='federated.1yal62x1we2nx41fzmy2g02xzh7v' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1yal62x1we2nx41fzmy2g02xzh7v'>
+            <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+            <column caption='Publication Date' datatype='date' name='[publication_date]' role='dimension' type='ordinal' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+            <column-instance column='[publication_date]' derivation='Year' name='[yr:publication_date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:title:nk]' member='&quot;1 000 Places to See Before You Die&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='border-color' value='#463020' />
+            <format attr='border-width' value='1' />
+            <format attr='border-style' value='solid' />
+            <format attr='text-align' value='auto' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f4f2e9' />
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-color' scope='rows' value='#463020' />
+            <format attr='stroke-color' scope='cols' value='#463020' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='border-width' value='1' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[yr:publication_date:ok]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>Publication Date:&#10;&lt;</run>
+                <run>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[yr:publication_date:ok]</run>
+                <run>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#463020' />
+                <format attr='mark-transparency' value='255' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='1267' />
+                <format attr='maxwidth' value='1267' />
+                <format attr='minheight' value='132860' />
+                <format attr='maxheight' value='132860' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <show-full-range>
+          <column>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[Value (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{82B7E4E8-91E9-4475-B23F-FA5ACC89C502}' />
+    </worksheet>
+    <worksheet name='Publisher'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='books.csv+ (Multiple Connections)' name='federated.1yal62x1we2nx41fzmy2g02xzh7v' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1yal62x1we2nx41fzmy2g02xzh7v'>
+            <column-instance column='[publisher]' derivation='None' name='[none:publisher:nk]' pivot='key' type='nominal' />
+            <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+            <column caption='Publisher' datatype='string' name='[publisher]' role='dimension' type='nominal' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:title:nk]' member='&quot;1 000 Places to See Before You Die&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='border-color' value='#463020' />
+            <format attr='border-width' value='1' />
+            <format attr='border-style' value='solid' />
+            <format attr='text-align' value='auto' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+            <format attr='width' field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:publisher:nk]' value='240' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f4f2e9' />
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-color' scope='rows' value='#463020' />
+            <format attr='stroke-color' scope='cols' value='#463020' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='border-width' value='1' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:publisher:nk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>Publisher:&#10;&lt;</run>
+                <run>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:publisher:nk]</run>
+                <run>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#463020' />
+                <format attr='mark-transparency' value='255' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='1267' />
+                <format attr='maxwidth' value='1267' />
+                <format attr='minheight' value='132860' />
+                <format attr='maxheight' value='132860' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <show-full-range>
+          <column>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[Value (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{3AAFB73B-C6C9-4E1F-949B-A0A11E3D7F04}' />
+    </worksheet>
+    <worksheet name='Publishers by Total Books '>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='books.csv+ (Multiple Connections)' name='federated.1yal62x1we2nx41fzmy2g02xzh7v' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1yal62x1we2nx41fzmy2g02xzh7v'>
+            <column caption='Book ID' datatype='integer' name='[bookID]' role='dimension' type='ordinal' />
+            <column-instance column='[bookID]' derivation='CountD' name='[ctd:bookID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[publisher]' derivation='None' name='[none:publisher:nk]' pivot='key' type='nominal' />
+            <column caption='Publisher' datatype='string' name='[publisher]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:publisher:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[ctd:bookID:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[ctd:bookID:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='border-color' value='#463020' />
+            <format attr='border-width' value='1' />
+            <format attr='border-style' value='solid' />
+            <format attr='text-align' value='auto' />
+            <format attr='cell-w' value='90' />
+            <format attr='cell-h' value='30' />
+            <format attr='cell' value='30' />
+            <format attr='cell-q' value='150' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+            <format attr='width' field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:publisher:nk]' value='240' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f4f2e9' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-color' scope='rows' value='#463020' />
+            <format attr='stroke-color' scope='cols' value='#463020' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='border-width' value='1' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[ctd:bookID:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#463020' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='1220' />
+                <format attr='maxwidth' value='1220' />
+                <format attr='minheight' value='132860' />
+                <format attr='maxheight' value='132860' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:publisher:nk]</rows>
+        <cols>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[ctd:bookID:qk]</cols>
+      </table>
+      <simple-id uuid='{65A9210A-343A-46B6-A523-2B78B24627B8}' />
+    </worksheet>
+    <worksheet name='Text Reviews'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='books.csv+ (Multiple Connections)' name='federated.1yal62x1we2nx41fzmy2g02xzh7v' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1yal62x1we2nx41fzmy2g02xzh7v'>
+            <column caption='Text Reviews' datatype='real' name='[Calculation_197595486266322964]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[text_reviews_count]/2' />
+            </column>
+            <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_197595486266322964]' derivation='Sum' name='[sum:Calculation_197595486266322964:qk]' pivot='key' type='quantitative' />
+            <column caption='Text Reviews Count' datatype='integer' name='[text_reviews_count]' role='measure' type='quantitative' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' filter-group='3'>
+            <groupfilter function='member' level='[none:title:nk]' member='&quot;1 000 Places to See Before You Die&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='border-color' value='#463020' />
+            <format attr='border-width' value='1' />
+            <format attr='border-style' value='solid' />
+            <format attr='text-align' value='auto' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f4f2e9' />
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-color' scope='rows' value='#463020' />
+            <format attr='stroke-color' scope='cols' value='#463020' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='border-width' value='1' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[sum:Calculation_197595486266322964:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>Text  Reviews&#10;&lt;</run>
+                <run>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[sum:Calculation_197595486266322964:qk]</run>
+                <run>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#463020' />
+                <format attr='mark-transparency' value='255' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='1267' />
+                <format attr='maxwidth' value='1267' />
+                <format attr='minheight' value='132860' />
+                <format attr='maxheight' value='132860' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <show-full-range>
+          <column>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[Value (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{63B35A6C-81DB-4A63-AAF4-333FA0D5BAAA}' />
+    </worksheet>
+    <worksheet name='Titles by Rating Count'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='books.csv+ (Multiple Connections)' name='federated.1yal62x1we2nx41fzmy2g02xzh7v' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1yal62x1we2nx41fzmy2g02xzh7v'>
+            <column caption='My Rating Count' datatype='real' name='[Calculation_197595486241009666]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[ratings_count]/2' />
+            </column>
+            <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+            <column caption='Ratings Count' datatype='integer' name='[ratings_count]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_197595486241009666]' derivation='Sum' name='[sum:Calculation_197595486241009666:qk]' pivot='key' type='quantitative' />
+            <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[sum:Calculation_197595486241009666:qk]' shelf='rows' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[sum:Calculation_197595486241009666:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='border-color' value='#463020' />
+            <format attr='border-width' value='1' />
+            <format attr='border-style' value='solid' />
+            <format attr='text-align' value='auto' />
+            <format attr='cell-w' value='126' />
+            <format attr='cell-h' value='42' />
+            <format attr='cell' value='42' />
+            <format attr='cell-q' value='210' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f4f2e9' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-color' scope='rows' value='#463020' />
+            <format attr='stroke-color' scope='cols' value='#463020' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='border-width' value='1' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[sum:Calculation_197595486241009666:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#463020' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='1220' />
+                <format attr='maxwidth' value='1220' />
+                <format attr='minheight' value='132860' />
+                <format attr='maxheight' value='132860' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]</rows>
+        <cols>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[sum:Calculation_197595486241009666:qk]</cols>
+      </table>
+      <simple-id uuid='{4DFA7661-4DD8-4DEC-B82C-4C1DBCFBF470}' />
+    </worksheet>
+    <worksheet name='Top 10 Languages Code'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='books.csv+ (Multiple Connections)' name='federated.1yal62x1we2nx41fzmy2g02xzh7v' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1yal62x1we2nx41fzmy2g02xzh7v'>
+            <column caption='My_Index' datatype='integer' name='[Calculation_197595486247227395]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='INDEX()-1'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='My_Total' datatype='integer' name='[Calculation_197595486247493636]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='WINDOW_MAX(COUNTD([bookID]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='My_Rank' datatype='integer' name='[Calculation_197595486247841797]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='RANK_UNIQUE([Calculation_197595486247493636],&apos;asc&apos;)'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Percantage' datatype='real' name='[Calculation_197595486248411143]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Calculation_197595486247493636]/[My_Total (copy)_197595486248157190]'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='X' datatype='real' name='[Calculation_197595486248775688]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COS(RADIANS([Calculation_197595486247227395]*[Calculation_197595486248411143]))*[Calculation_197595486247841797]'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Y' datatype='real' name='[Calculation_197595486249459721]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SIN(RADIANS([Calculation_197595486247227395]*[Calculation_197595486248411143]))*[Calculation_197595486247841797]'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='My_Total_Max' datatype='integer' name='[My_Total (copy)_197595486248157190]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='WINDOW_MAX(COUNTD([bookID]))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column aggregation='None' caption='Path' datatype='integer' name='[Value (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[Value]' peg='0' size='1' />
+            </column>
+            <column datatype='integer' name='[Value]' role='measure' type='quantitative' />
+            <column caption='Book ID' datatype='integer' name='[bookID]' role='dimension' type='ordinal' />
+            <column caption='Language Code' datatype='string' name='[language_code]' role='dimension' type='nominal' />
+            <column-instance column='[Value (bin)]' derivation='None' name='[none:Value (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[language_code]' derivation='None' name='[none:language_code:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_197595486247493636]' derivation='User' name='[usr:Calculation_197595486247493636:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[Value (bin)]' ordering-type='Field' />
+            </column-instance>
+            <column-instance column='[Calculation_197595486248775688]' derivation='User' name='[usr:Calculation_197595486248775688:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+              <table-calc field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[Calculation_197595486247227395]' ordering-field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[Value (bin)]' ordering-type='Field' />
+              <table-calc field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[Calculation_197595486248411143]' ordering-type='Rows' />
+              <table-calc field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[Calculation_197595486247493636]' ordering-field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[Value (bin)]' ordering-type='Field' />
+              <table-calc field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[My_Total (copy)_197595486248157190]' ordering-type='Field' tc-options='NullIfIncomplete'>
+                <order field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[language_code]' />
+                <order field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[Value (bin)]' />
+              </table-calc>
+              <table-calc field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[Calculation_197595486247841797]' ordering-field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[language_code]' ordering-type='Field' />
+            </column-instance>
+            <column-instance column='[Calculation_197595486249459721]' derivation='User' name='[usr:Calculation_197595486249459721:qk:14]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' />
+              <table-calc field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[Calculation_197595486247227395]' ordering-field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[Value (bin)]' ordering-type='Field' />
+              <table-calc field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[Calculation_197595486248411143]' ordering-type='Rows' />
+              <table-calc field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[Calculation_197595486247493636]' ordering-field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[Value (bin)]' ordering-type='Field' />
+              <table-calc field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[My_Total (copy)_197595486248157190]' ordering-type='Field'>
+                <order field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[language_code]' />
+                <order field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[Value (bin)]' />
+              </table-calc>
+              <table-calc field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[Calculation_197595486247841797]' ordering-field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[language_code]' ordering-type='Field' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:language_code:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNTD([bookID])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:language_code:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:language_code:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[usr:Calculation_197595486249459721:qk:14]' value='58' />
+            <encoding attr='space' class='0' field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[usr:Calculation_197595486249459721:qk:14]' field-type='quantitative' max='14.644953722638096' min='-12.249421501651675' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[usr:Calculation_197595486248775688:qk:2]' field-type='quantitative' max='17.701508924744353' min='-14.311348984024743' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='border-color' value='#463020' />
+            <format attr='border-width' value='1' />
+            <format attr='border-style' value='solid' />
+            <format attr='text-align' value='auto' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f4f2e9' />
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-color' scope='rows' value='#463020' />
+            <format attr='stroke-color' scope='cols' value='#463020' />
+            <format attr='line-visibility' scope='cols' value='on' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='border-width' value='1' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#463020' />
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:language_code:nk]' />
+              <text column='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:language_code:nk]' />
+              <text column='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[usr:Calculation_197595486247493636:qk]' />
+              <path column='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:Value (bin):ok]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>&lt;</run>
+                <run>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:language_code:nk]</run>
+                <run>&gt;     &lt;</run>
+                <run>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[usr:Calculation_197595486247493636:qk]</run>
+                <run>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#463020' />
+                <format attr='mark-transparency' value='255' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-mode' value='line-ends' />
+                <format attr='mark-labels-cull' value='false' />
+                <format attr='mark-labels-line-last' value='false' />
+                <format attr='mark-labels-line-first' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='1267' />
+                <format attr='maxwidth' value='1267' />
+                <format attr='minheight' value='132860' />
+                <format attr='maxheight' value='132860' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[usr:Calculation_197595486248775688:qk:2]</rows>
+        <cols>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[usr:Calculation_197595486249459721:qk:14]</cols>
+        <show-full-range>
+          <column>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[Value (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{DEE85063-30D4-4A1C-9DA1-1635FEFED88D}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#f4f2e9' />
+        </style-rule>
+      </style>
+      <size maxheight='1050' maxwidth='1850' minheight='560' minwidth='420' sizing-mode='range' />
+      <datasources>
+        <datasource caption='books.csv+ (Multiple Connections)' name='federated.1yal62x1we2nx41fzmy2g02xzh7v' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1yal62x1we2nx41fzmy2g02xzh7v'>
+        <column-instance column='[title]' derivation='None' name='[none:title:nk]' pivot='key' type='nominal' />
+        <column caption='Title' datatype='string' name='[title]' role='dimension' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98002' id='11' param='horz' type-v2='layout-flow' w='99034' x='483' y='999'>
+            <zone h='98002' id='9' type-v2='layout-basic' w='94628' x='483' y='999'>
+              <zone h='40200' id='3' name='Authors by Total Books' w='37417' x='483' y='58801'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='40200' id='5' name='Publishers by Total Books ' w='29629' x='37900' y='58801'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='40200' id='6' name='Titles by Rating Count' w='27582' x='67529' y='58801'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='50062' id='7' name='Books by Publication Date' w='31586' x='483' y='8739'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='50062' id='8' name='Top 10 Languages Code' w='27582' x='67529' y='8739'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='41073' id='13' is-scaled='1' param='C:/Users/admin/Downloads/book.PNG' type-v2='bitmap' w='35460' x='32069' y='17728'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='8989' id='14' param='C:/Users/admin/Downloads/Capture.PNG' type-v2='bitmap' w='35460' x='32069' y='8739'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='7740' id='15' name='Authors' show-title='false' w='7486' x='483' y='999'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='7740' id='16' mode='dropdown' name='Authors' param='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' show-all='false' type-v2='filter' w='35460' x='32069' y='999'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='7740' id='17' name='Languages Code' show-title='false' w='7426' x='7969' y='999'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='7740' id='19' name='Publication Date' show-title='false' w='6828' x='15395' y='999'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='7740' id='21' name='Publisher' show-title='false' w='9846' x='22223' y='999'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='7740' id='23' name=' Ratings Count' show-title='false' w='6896' x='67529' y='999'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='7740' id='25' name='Numbers of Pages' show-title='false' w='7181' x='87930' y='999'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='7740' id='27' name='Average Rating' show-title='false' w='7182' x='80748' y='999'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='7740' id='29' name='Text Reviews' show-title='false' w='6323' x='74425' y='999'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='73' h='98002' id='10' is-fixed='true' param='vert' type-v2='layout-flow' w='4406' x='95111' y='999'>
+              <zone h='28340' id='12' name='Top 10 Languages Code' pane-specification-id='0' param='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:language_code:nk]' type-v2='color' w='4406' x='95111' y='999'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='7241' id='18' mode='dropdown' name='Languages Code' param='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' show-all='false' type-v2='filter' w='4406' x='95111' y='29339'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='7241' id='20' mode='dropdown' name='Publication Date' param='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' show-all='false' type-v2='filter' w='4406' x='95111' y='36580'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='7241' id='22' mode='dropdown' name='Publisher' param='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' show-all='false' type-v2='filter' w='4406' x='95111' y='43821'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='7241' id='24' mode='dropdown' name=' Ratings Count' param='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' show-all='false' type-v2='filter' w='4406' x='95111' y='51062'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='7241' id='26' mode='dropdown' name='Numbers of Pages' param='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' show-all='false' type-v2='filter' w='4406' x='95111' y='58303'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='7241' id='28' mode='dropdown' name='Average Rating' param='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' show-all='false' type-v2='filter' w='4406' x='95111' y='65544'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='7241' id='30' mode='dropdown' name='Text Reviews' param='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' show-all='false' type-v2='filter' w='4406' x='95111' y='72785'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='3050' minheight='3050' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='32' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98002' id='31' param='vert' type-v2='layout-flow' w='99034' x='483' y='999'>
+                <zone h='7740' id='16' mode='dropdown' name='Authors' param='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' show-all='false' type-v2='filter' w='35460' x='32069' y='999'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='74' h='7740' id='15' is-fixed='true' name='Authors' show-title='false' w='7486' x='483' y='999'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7241' id='18' mode='dropdown' name='Languages Code' param='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' show-all='false' type-v2='filter' w='4406' x='95111' y='29339'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='74' h='7740' id='17' is-fixed='true' name='Languages Code' show-title='false' w='7426' x='7969' y='999'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7241' id='20' mode='dropdown' name='Publication Date' param='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' show-all='false' type-v2='filter' w='4406' x='95111' y='36580'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='74' h='7740' id='19' is-fixed='true' name='Publication Date' show-title='false' w='6828' x='15395' y='999'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7241' id='22' mode='dropdown' name='Publisher' param='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' show-all='false' type-v2='filter' w='4406' x='95111' y='43821'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='74' h='7740' id='21' is-fixed='true' name='Publisher' show-title='false' w='9846' x='22223' y='999'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7241' id='24' mode='dropdown' name=' Ratings Count' param='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' show-all='false' type-v2='filter' w='4406' x='95111' y='51062'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='74' h='7740' id='23' is-fixed='true' name=' Ratings Count' show-title='false' w='6896' x='67529' y='999'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7241' id='30' mode='dropdown' name='Text Reviews' param='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' show-all='false' type-v2='filter' w='4406' x='95111' y='72785'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='74' h='7740' id='29' is-fixed='true' name='Text Reviews' show-title='false' w='6323' x='74425' y='999'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7241' id='28' mode='dropdown' name='Average Rating' param='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' show-all='false' type-v2='filter' w='4406' x='95111' y='65544'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='74' h='7740' id='27' is-fixed='true' name='Average Rating' show-title='false' w='7182' x='80748' y='999'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='7241' id='26' mode='dropdown' name='Numbers of Pages' param='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' show-all='false' type-v2='filter' w='4406' x='95111' y='58303'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='74' h='7740' id='25' is-fixed='true' name='Numbers of Pages' show-title='false' w='7181' x='87930' y='999'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='50062' id='7' is-fixed='true' name='Books by Publication Date' w='31586' x='483' y='8739'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='86' h='8989' id='14' is-fixed='true' param='C:/Users/admin/Downloads/Capture.PNG' type-v2='bitmap' w='35460' x='32069' y='8739'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='50062' id='8' is-fixed='true' name='Top 10 Languages Code' w='27582' x='67529' y='8739'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='28340' id='12' name='Top 10 Languages Code' pane-specification-id='0' param='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:language_code:nk]' type-v2='color' w='4406' x='95111' y='999'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='41073' id='13' is-fixed='true' is-scaled='1' param='C:/Users/admin/Downloads/book.PNG' type-v2='bitmap' w='35460' x='32069' y='17728'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='40200' id='3' is-fixed='true' name='Authors by Total Books' w='37417' x='483' y='58801'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='40200' id='5' is-fixed='true' name='Publishers by Total Books ' w='29629' x='37900' y='58801'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='40200' id='6' is-fixed='true' name='Titles by Rating Count' w='27582' x='67529' y='58801'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{10D53119-9E55-42B7-AA2D-896D4DCDA760}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='Authors by Total Books'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{82D8ACEE-02BB-4AF0-A609-9441F49F83A9}' />
+    </window>
+    <window class='worksheet' name='Publishers by Total Books '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2B9A8A38-52E8-49B6-AB95-6729E8363C8F}' />
+    </window>
+    <window class='worksheet' name='Titles by Rating Count'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{2A1146DD-86D7-42CB-BB34-2C2D77DB0807}' />
+    </window>
+    <window class='worksheet' name='Books by Publication Date'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{6A060D17-B46D-42F7-A984-C37DF3C02C82}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Top 10 Languages Code'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:language_code:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:language_code:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{F41AE46B-B949-441B-8771-8B6010959CB8}' />
+    </window>
+    <window class='worksheet' name='Authors'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' show-all='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{95DA2299-A82E-43F3-A13A-105826D2AA5E}' />
+    </window>
+    <window class='worksheet' name='Languages Code'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' show-all='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{E161952C-74EF-47DF-97CE-A5E1E9CFEA79}' />
+    </window>
+    <window class='worksheet' name='Publication Date'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' show-all='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{7BD4F8B1-98DD-4254-906B-A9EB4C5CA20F}' />
+    </window>
+    <window class='worksheet' name='Publisher'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' show-all='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{61A54809-3947-4F31-85A1-ABF1BDA93CF6}' />
+    </window>
+    <window class='worksheet' name=' Ratings Count'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' show-all='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{A68425E8-17C9-48A6-BB5C-FAB0CB7FE877}' />
+    </window>
+    <window class='worksheet' name='Numbers of Pages'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' show-all='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{151783D8-D5C8-4A78-9DE7-437608FE3DB7}' />
+    </window>
+    <window class='worksheet' name='Average Rating'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' show-all='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{70FD12BF-7190-4E62-9D0F-97A1BB87CB61}' />
+    </window>
+    <window class='worksheet' name='Text Reviews'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.1yal62x1we2nx41fzmy2g02xzh7v].[none:title:nk]' show-all='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{9C62074F-2619-49C3-BF86-2B001DA20A97}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name=' Ratings Count'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Authors'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Authors by Total Books' />
+        <viewpoint name='Average Rating'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Books by Publication Date'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Languages Code'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Numbers of Pages'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Publication Date'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Publisher'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Publishers by Total Books ' />
+        <viewpoint name='Text Reviews'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Titles by Rating Count' />
+        <viewpoint name='Top 10 Languages Code'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='16' />
+      <simple-id uuid='{365F553E-7C24-4914-9A06-7C14C5251E68}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Top 10 Languages Code' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
